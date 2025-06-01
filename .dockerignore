@@ -1,0 +1,22 @@
+# Node.js
+frontend/node_modules
+frontend/.npm
+frontend/.next
+frontend/dist
+
+# PHP
+backend/vendor
+backend/storage/logs
+backend/.env
+
+# Général
+.git
+.gitignore
+Dockerfile
+docker-compose.yaml
+docker-compose.override.yml
+docker/
+*.log
+*.md
+*.DS_Store
+.env

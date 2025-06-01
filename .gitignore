@@ -1,0 +1,34 @@
+# Node.js
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+/frontend/.env
+
+# PHP
+/backend/vendor/
+/backend/.env
+/backend/storage/
+/backend/storage/logs/
+
+# Vite
+.vite
+
+# Docker
+.env
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

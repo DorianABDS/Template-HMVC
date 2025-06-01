@@ -1,0 +1,10 @@
+{
+    "name": "dorian/templates-hmvc",
+    "description": "Template PHP HMVC Dockerisé",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {}
+}
