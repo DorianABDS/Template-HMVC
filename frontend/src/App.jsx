@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div>
-      <h1>Message backend:</h1>
+      <h1 className='text-red-500'>Message backend:</h1>
       <p>{message || 'Chargement...'}</p>
     </div>
   );

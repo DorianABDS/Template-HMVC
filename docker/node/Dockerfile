@@ -1,13 +1,17 @@
-FROM node:18-alpine
+FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY frontend/package.json ./
+RUN npm install
 
-RUN npm install 
+RUN npx tailwindcss init -p
 
-COPY . .
+COPY frontend/ ./
+RUN npm run build
 
-EXPOSE 5173
-
-CMD ["npm", "run", "dev"]
+FROM nginx:alpine
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY frontend/docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
